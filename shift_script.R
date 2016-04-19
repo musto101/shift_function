@@ -1,4 +1,4 @@
-function(x,y,nboot=200,plotit=TRUE,plotop=FALSE,SEED=TRUE){
+shifthd<- function(x,y,nboot=200,plotit=TRUE,plotop=FALSE,SEED=TRUE){
         #
         #   Compute confidence intervals for the difference between deciles
         #   of two independent groups. The simultaneous probability coverage is .95.
