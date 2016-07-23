@@ -6,7 +6,8 @@ function(x,q=.5,na.rm=TRUE,STAND=NULL){
         #  and the desired quantile is q
         #  The default value for q is .5.
         #
-        if(na.rm)x=elimna(x)
+        if(is.na(x)){
+        x<- na.omit(x)
         n<-length(x)
         m1<-(n+1)*q
         m2<-(n+1)*(1-q)
@@ -15,4 +16,6 @@ function(x,q=.5,na.rm=TRUE,STAND=NULL){
         y<-sort(x)
         hd<-sum(w*y)
         hd
+        
+        }
 }
