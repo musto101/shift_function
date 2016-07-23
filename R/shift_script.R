@@ -1,7 +1,8 @@
-function(x,y,nboot=200,plotit=TRUE,plotop=FALSE,SEED=TRUE){
+shifthd<- function(x,y,nboot=200,plotit=TRUE,plotop=FALSE,SEED=TRUE){
         #
         #   Compute confidence intervals for the difference between deciles
-        #   of two independent groups. The simultaneous probability coverage is .95.
+        #   of two independent groups. The simultaneous probability coverage is
+        #   .95.
         #   The Harrell-Davis estimate of the qth quantile is used.
         #   The default number of bootstrap samples is nboot=200
         #
@@ -23,10 +24,12 @@ function(x,y,nboot=200,plotit=TRUE,plotop=FALSE,SEED=TRUE){
                 q<-i/10
                 print("Working on quantile")
                 print(q)
-                data<-matrix(sample(x,size=length(x)*nboot,replace=TRUE),nrow=nboot)
+                data<-matrix(sample(x,size=length(x)*nboot,replace=TRUE),nrow=
+                               nboot)
                 bvec<-apply(data,1,hd,q)
                 sex<-var(bvec)
-                data<-matrix(sample(y,size=length(y)*nboot,replace=TRUE),nrow=nboot)
+                data<-matrix(sample(y,size=length(y)*nboot,replace=TRUE),nrow=
+                               nboot)
                 bvec<-apply(data,1,hd,q)
                 sey<-var(bvec)
                 dif<-hd(y,q)-hd(x,q)
