@@ -1,1 +1,9 @@
+<<<<<<< 4400c030548eb0baf3d3dbe3185a8e94855b0c4f
 .Rproj
+=======
+*.Rproj
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+>>>>>>> Final fix of .gitignore file
