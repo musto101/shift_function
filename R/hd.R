@@ -9,6 +9,7 @@
 #' are to be removed.
 #' @return It returns a single numeric value indicating the value in the data
 #' at the quantile specified.
+#' @export
 #' 
 hd <- function(x, q = .5, na.rm = TRUE){
         

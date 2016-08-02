@@ -7,6 +7,7 @@
 #' the deciles.
 #' @return It returns a vector containing the values at deciles 1 to 9 for
 #' the data.
+#' @export
 #' 
 deciles <- function(x){
   
@@ -20,7 +21,7 @@ deciles <- function(x){
     m1 <- (n + 1) * q
     m2 <- (n + 1) * (1 - q)
     wx <- pbeta(vecx / n, m1, m2) - pbeta((vecx - 1) / n, m1, m2)  # W sub i values
-    xq[i] <- sum(wx * xs)
+    xq[i] <- sum(wx * x)
   }
   
   xq

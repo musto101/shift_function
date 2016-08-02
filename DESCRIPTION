@@ -1,0 +1,16 @@
+Package: shift
+Type: Package
+Title: Shift Function for Large Datasets
+Version: 0.0.0.9000
+Author: Henry Musto <musto101@googlemail.com>
+Maintainer: Henry Musto <musto101@googlemail.com>
+Description: Constructs Rand Wilcox's Shift Function for very large datasets.
+License: file LICENSE
+Depends:
+    R (>= 3.3.0)
+LazyData: FALSE
+Suggests:
+    testthat
+Imports:
+    stats
+RoxygenNote: 5.0.1
