@@ -45,11 +45,11 @@
         
         dat <- matrix(parSapply(cl = cl, X = x, FUN = sample_func, nboot = nboot),
                       nrow = nboot)
-        bvec <- parApply(cl = cl, dat, 1, hd, q)
+        bvec <- parApply(cl, dat, 1, hd, q)
         sex <- var(bvec)
         
         dat <- matrix(parSapply(cl = cl, X = y, sample_func, nboot = nboot))
-        bvec <- parApply(cl = cl, dat, 1, hd, q)
+        bvec <- parApply(cl = cl, dat, 1, hd, q = q)
         sey <- var(bvec)
         
         dif <- hd(y, q) - hd(x, q)
