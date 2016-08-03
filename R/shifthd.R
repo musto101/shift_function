@@ -26,6 +26,7 @@
                       SEED = TRUE){
     
       # User defined parameters.
+    
       no_cores <- detectCores() - 1 
       cl <- makeCluster(no_cores)
     
@@ -84,5 +85,5 @@
         if(plotop) points(c(1:9) / 10, m[, 3])
       }
       stopCluster(cl)
-          m
+          data.frame(m)
   }
