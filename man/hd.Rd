@@ -4,16 +4,13 @@
 \alias{hd}
 \title{hd Function}
 \usage{
-hd(x, q = 0.5, na.rm = TRUE)
+hd(x, q = 0.5)
 }
 \arguments{
 \item{x}{is a vector containing the data to be used in the computation.}
 
 \item{q}{is an float indicating the quantile to be computed.
 the default argument is .5.}
-
-\item{na.rm}{is a boolean value indicating whether any NA values in the data
-are to be removed.}
 }
 \value{
 It returns a single numeric value indicating the value in the data

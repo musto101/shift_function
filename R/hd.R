@@ -5,17 +5,11 @@
 #' @param x is a vector containing the data to be used in the computation.
 #' @param q is an float indicating the quantile to be computed.
 #' the default argument is .5.
-#' @param na.rm is a boolean value indicating whether any NA values in the data
-#' are to be removed.
 #' @return It returns a single numeric value indicating the value in the data
 #' at the quantile specified.
 #' @export
 #' 
-hd <- function(x, q = .5, na.rm = TRUE){
-        
-        if(sum(is.na(x)) > 0){
-          x <- na.omit(x)
-        } 
+hd <- function(x, q = .5){
   
           n <- length(x)
           m1 <- (n + 1) * q 

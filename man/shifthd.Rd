@@ -13,6 +13,21 @@ shifthd(x, y, nboot = 200, plotit = TRUE, plotop = FALSE, SEED = TRUE)
 
 \item{nboot}{is a integer value specifying the number of bootstrap samples
 to compute.}
+
+\item{plotit}{is a boolean value indicating whether the shift function is
+to be plotted.}
+
+\item{plotop}{is a boolean indicating whether the actual values at the
+deciles of x are to be plotted. If not, the number of the decile is plotted.}
+
+\item{SEED}{is a boolean indicating whether a seed is to be used for
+reproducible results.}
+}
+\value{
+It rerturns a 9 by 3 matrix containing the lower and upper 
+confidence intervals for the shift function, and the shift function 
+estimation itself. If plotit is TRUE it also returns a plot of the 
+shift function.
 }
 \description{
 This function computes the confidence intervals for the difference

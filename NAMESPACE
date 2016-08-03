@@ -2,3 +2,6 @@
 
 export(deciles)
 export(hd)
+export(sample_func)
+export(shifthd)
+import(parallel)
